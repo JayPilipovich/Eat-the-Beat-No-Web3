@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e257d130f47ae7b479953871aa021a19, type: 3}
+  m_Name: FlowControlData
+  m_EditorClassIdentifier: 
+  _emulatorSettings:
+    emulatorDataDirectory: ./FlowEmulator
+    flowExecutablePathOverride: 
+    runEmulatorInPlayMode: 1
+    persistData: 1
+    killOtherFlow: 1
+    verbose: 1
+    emulatorEndpoint: http://127.0.0.1:8888/v1
+  _textReplacements:
+  - description: FlowWords Contract Name
+    originalText: CONTRACT_NAME
+    replacementText: FlowWords
+    active: 1
+    _applyToAccounts:
+    - All
+    _applyToGateways:
+    - Emulator
+  - description: FlowWords Deploy Account
+    originalText: GAME_DEPLOY_ACCOUNT
+    replacementText: 0xf8d6e0586b0a20c7
+    active: 1
+    _applyToAccounts:
+    - All
+    _applyToGateways:
+    - Emulator
+  _accounts:
+  - _name: emulator_service_account
+    infoKeys:
+    - Private Key
+    - Address
+    infoValues:
+    - 98277e776222ceb41a4300a6b0abfe7a026096ed4d8f316f6ad8c03e5bca4ad2
+    - 0xf8d6e0586b0a20c7
+    _gatewayName: Emulator
+  - _name: user1
+    infoKeys:
+    - Private Key
+    - Address
+    infoValues:
+    - c3c4ab6b27ad9550bd1eb2712f95d99f438db3f2e786511c3380647bb90d2f25
+    - 0x179b6b1cb6755e31
+    _gatewayName: Emulator
